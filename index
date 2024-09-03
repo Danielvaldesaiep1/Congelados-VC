@@ -1,0 +1,838 @@
+<link async rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<style>
+	body {
+	    overflow-x: hidden;
+	  }
+	
+	  #main-layout,
+	  section .container {
+	    background-color: #ffffff;
+	    background: #ffffff;
+	  }
+	
+	  .navbar-brand.d-flex.align-items-center.site-logo img {
+	    width: 160px;
+	    height: auto;
+	  }
+	
+	  .header-title .travellers-header-title,
+	  .event-btn-wrapper {
+	    display: none !important;
+	  }
+	
+	  .header-title {
+	    opacity: 0 !important;
+	  }
+	
+	  .title-box {
+	    background: #262626;
+	    color: #fff;
+	    border-radius: 14px;
+	  }
+	
+	  .title-box h4 {
+	    font-size: 17px;
+	  }
+	
+	  .event-btn-wrapper {
+	    display: none !important;
+	  }
+	
+	  .container-int {
+	    margin-top: -50px;
+	    border-radius: 30px 30px 0 0;
+	    position: relative;
+	    z-index: 2;
+	  }
+	
+	  .top {
+	    background: #cb0c58;
+	    color: #fff;
+	    font-size: 14px;
+	    position: fixed;
+	    z-index: 5;
+	  }
+	
+	  .row-cols-1 > * {
+	    -ms-flex: 0 0 100%;
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	  }
+	
+	  .row-cols-2 > * {
+	    flex: 0 0 auto;
+	    width: 50%;
+	  }
+	
+	  .contenedor-footer {
+	    position: relative;
+	  }
+	
+	  .footer__pickup {
+	    background: #cb0c58;
+	    padding: 50px 0px;
+	    color: #ffffff;
+	    border-radius: 20px;
+	    position: absolute;
+	    bottom: -160px;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	  }
+	
+	  .footer__pickup p {
+	    font-size: 1.2rem;
+	  }
+	
+	  .footer__pickup a {
+	    color: #ffffff;
+	    font-size: 1.2rem;
+	  }
+	
+	  .footer__pickup h3 {
+	    color: #ffffff;
+	  }
+	
+	  iframe {
+	    width: 100%;
+	    height: 80vh;
+	  }
+	
+	  .banner-img {
+	    margin-left: -15px;
+	  }
+	
+	  .div-img {
+	    border-top-left-radius: 40px;
+	    border-bottom-left-radius: 40px;
+	    border-top-right-radius: 40px;
+	    border-bottom-right-radius: 40px;
+	  }
+	
+	  @media (min-width: 768px) {
+	    .row-cols-md-2 > * {
+	      flex: 0 0 auto;
+	      width: 50%;
+	    }
+	
+	    .row-cols-md-3 > * {
+	      flex: 0 0 auto;
+	      width: 33.3333333333%;
+	    }
+	  }
+	
+	  @media (min-width: 992px) {
+	    .row-cols-lg-4 > * {
+	      flex: 0 0 auto;
+	      width: 25%;
+	    }
+	  }
+	
+	  .section-wrapper {
+	    padding: 0rem 0;
+	  }
+	
+	  @media (min-width: 768px) {
+	    .section-wrapper {
+	      padding: 0 5rem;
+	    }
+	  }
+	
+	  .rounded {
+	    border-radius: 0.3rem !important;
+	  }
+	
+	  h1 strong {
+	    font-size: 20px;
+	  }
+	
+	  h2 {
+	    color: #464646;
+	    font-size: 14px;
+	  }
+	
+	  h3 {
+	    color: #464646;
+	    font-size: 20px;
+	  }
+	
+	  h3.heading {
+	    font-size: 30px;
+	    font-weight: 900;
+	  }
+	
+	  .rec h3 {
+	    font-size: 16px;
+	  }
+	
+	  p.description {
+	    font-size: 12px;
+	  }
+	
+	  p.description a {
+	    color: #cb0056;
+	    text-decoration: underline;
+	  }
+	
+	  .cont-video {
+	    min-height: 210px;
+	  }
+	
+	  @media (min-width: 992px) {
+	    .title-big {
+	      font-size: 44px;
+	    }
+	
+	    h1 strong {
+	      font-size: 30px;
+	    }
+	
+	    h2 {
+	      font-size: 20px;
+	    }
+	
+	    .description-big {
+	      font-size: 22px;
+	    }
+	
+	    .container-int {
+	      margin-top: -50px;
+	      border-radius: 50px 50px 0 0;
+	    }
+	
+	    .rec h3 {
+	      font-size: 30px;
+	    }
+	
+	    .text-justify {
+	      text-align: center !important;
+	    }
+	
+	    .text-justify h3 {
+	      font-size: 20px !important;
+	    }
+	
+	    .title-box h4 {
+	      font-size: 25px;
+	    }
+	
+	    .cont-video {
+	      min-height: 500px;
+	    }
+	
+	    p.description {
+	      font-size: 20px;
+	    }
+	
+	    .top {
+	      font-size: 17px;
+	    }
+	  }
+	
+	  @media (max-width: 992px) {
+	    .img-titulo {
+	      width: 100%;
+	    }
+	
+	    .p_descripcion {
+	      font-size: 13px;
+	    }
+	
+	    h1.heading {
+	      font-size: 24px;
+	    }
+	
+	    h2.heading {
+	      font-size: 21px;
+	    }
+	
+	    h3.heading {
+	      font-size: 19px;
+	    }
+	
+	    h4.heading {
+	      font-size: 14px;
+	    }
+	  }
+	
+	  .text-gris {
+	    color: #6e6e6e;
+	  }
+	
+	  .bg-site {
+	    background: #eaeaea;
+	  }
+	
+	  .space-y {
+	    margin: 5rem 0;
+	    border-top: 1px solid #959595;
+	  }
+	
+	  .arrow-right {
+	    width: 20px;
+	  }
+	
+	  .cont-principal {
+	    position: relative;
+	    width: 102%;
+	    background-color: #ffffff;
+	    display: block;
+	    padding: 12rem 10rem;
+	    z-index: 1;
+	    border-top-right-radius: 60px;
+	    border-bottom-right-radius: 60px;
+	  }
+	
+	  .cont-principal .arrow-down {
+	    position: absolute;
+	    width: 60px;
+	    top: 50%;
+	    right: -20px;
+	    transform: translateY(-50%);
+	  }
+	
+	  @media (max-width: 992px) {
+	    .arrow-down {
+	      display: none;
+	    }
+	  }
+	
+	  .cont-principal > .info-principal {
+	    position: relative;
+	    width: 90%;
+	    background-color: #ffffff;
+	  }
+	
+	  .cont-principal > .info-principal .title {
+	    font-size: 38px;
+	    letter-spacing: 1.5px;
+	  }
+	
+	  .cont-principal > .info-principal .p_descripcion {
+	    font-size: 22px;
+	  }
+	
+	  .btn-play {
+	    position: absolute;
+	    width: 60px;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	  }
+	
+	  .btn-play:hover {
+	    opacity: 0.75;
+	  }
+	
+	  .video {
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    object-fit: cover;
+	  }
+	
+	  .video-js,
+	  .video-js .vjs-tech {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	  }
+	
+	  .video-js .vjs-tech {
+	    object-fit: cover;
+	  }
+	
+	  @media (max-width: 992px) {
+	    .cont-principal {
+	      width: 100%;
+	      padding: 2rem;
+	      border-top-right-radius: 0;
+	      border-bottom-right-radius: 0;
+	    }
+	
+	    .cont-principal > .info-principal {
+	      width: 100%;
+	    }
+	
+	    .cont-principal > .info-principal .title {
+	      font-size: 26px;
+	    }
+	
+	    .cont-principal > .info-principal .p_descripcion {
+	      font-size: 16px;
+	    }
+	  }
+	
+	  .cont-slider .swiper-button-next,
+	  .cont-slider .swiper-button-prev {
+	    color: #000;
+	    background-color: #cb0056;
+	    padding: 10px;
+	    border-radius: 100%;
+	    width: 40px;
+	    height: 40px;
+	    transition: all 0.2s linear;
+	    z-index: 1;
+	  }
+	
+	  .cont-slider .swiper-button-prev {
+	    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
+	  }
+	
+	  .cont-slider .swiper-button-next {
+	    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+	  }
+	
+	  .cont-slider .swiper-button-prev,
+	  .cont-slider .swiper-rtl .swiper-button-next {
+	    left: 15px;
+	    top: 60%;
+	  }
+	
+	  .cont-slider .swiper-button-next,
+	  .cont-slider .swiper-rtl .swiper-button-prev {
+	    right: 15px;
+	    top: 60%;
+	  }
+	
+	  @media (max-width: 992px) {
+	    .cont-slider .swiper-button-prev,
+	    .cont-slider .swiper-rtl .swiper-button-next {
+	      left: 10px;
+	      top: 50%;
+	    }
+	
+	    .cont-slider .swiper-button-next,
+	    .cont-slider .swiper-rtl .swiper-button-prev {
+	      right: 10px;
+	      top: 50%;
+	    }
+	  }
+	
+	  .cont-slider .swiper-button-next:after,
+	  .cont-slider .swiper-button-prev:after {
+	    font-size: 24px;
+	    transition: all 0.3s ease-in;
+	    color: #ffffff;
+	  }
+	
+	  .cont-slider .swiper-button-prev:hover:after {
+	    transform: translateX(-2px);
+	  }
+	
+	  .cont-slider .swiper-button-next:hover:after {
+	    transform: translateX(2px);
+	  }
+	
+	  .swiperThumb .swiper-slide {
+	    opacity: 0 !important;
+	  }
+	
+	  .swiperThumb .swiper-slide-visible {
+	    opacity: 1 !important;
+	  }
+	
+	  .ItemExp {
+	    cursor: pointer;
+	  }
+	
+	  .WrappItemExp {
+	    background-color: #ffffff;
+	    border-radius: 10px;
+	    overflow: hidden;
+	  }
+	
+	  .WrappModal {
+	    background-color: #ffffff;
+	    border-radius: 20px;
+	  }
+	
+	  .text-justify {
+	    text-align: justify;
+	  }
+	
+	  .text-justify h3 {
+	    font-size: 12px;
+	  }
+	
+	  .bloqueCyber {
+	    position: relative;
+	    display: block;
+	    font-family: "Istok_Web", "Tahoma" !important;
+	  }
+	
+	  .fechasCyber {
+	    position: relative;
+	    display: block;
+	    background: #cb0056;
+	    color: #fff;
+	    font-size: 18px;
+	    text-align: center;
+	    width: 230px;
+	    padding: 6px;
+	    border-radius: 20px;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	  }
+	
+	  .bloqueCyber .bloqueGris {
+	    background: #f4f4f4;
+	    padding: 0;
+	    margin: 0;
+	    position: relative;
+	    display: block;
+	  }
+	
+</style>
+<script async>
+	// function load() {
+	  //   setTimeout(() => {
+	  //     const video = document.getElementById("video");
+	  //     video.play();
+	  //   }, 800);
+	  // }
+	  // window.onload = load;
+	
+	  // window.addEventListener('load', function () {
+	  //   setTimeout(() => {
+	  //     var video = document.getElementById("video");
+	  //     video.play();
+	  //   }, 2000);
+	  // });
+	
+	  // document.addEventListener("DOMContentLoaded", function () {
+	  //   var videos = [].slice.call(document.querySelectorAll("video.lazy"));
+	
+	  //   if ("IntersectionObserver" in window) {
+	  //     var videoObserver = new IntersectionObserver(function (entries, observer) {
+	  //       entries.forEach(function (video) {
+	  //         if (video.isIntersecting) {
+	  //           video.poster = video.dataset.poster;
+	  //           for (var source in video.target.children) {
+	  //             var videoSource = video.target.children[source];
+	  //             if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+	  //               videoSource.src = videoSource.dataset.src;
+	  //             }
+	  //           }
+	
+	  //           video.target.load();
+	  //           video.target.classList.remove("lazy");
+	  //           videoObserver.unobserve(video.target);
+	  //         }
+	  //       });
+	  //     });
+	
+	  //     videos.forEach(function (video) {
+	  //       videoObserver.observe(video);
+	  //     });
+	  //   }
+	  // });
+	
+</script>
+<script async>
+	window.lazyLoadOptions = {
+	    elements_selector: ".lazy",
+	  };
+	
+	  // window.addEventListener('load', function () {
+	  document.addEventListener("DOMContentLoaded", function () {
+	    setTimeout(() => {
+	      // var video = document.getElementById("video");
+	      // video.muted = false;
+	      // video.play();
+	
+	      const video = document.getElementById("video");
+	
+	      if (!video) return;
+	
+	      const promise = video.play();
+	      if (promise !== undefined) {
+	        promise
+	          .then(() => {
+	            // Autoplay started
+	          })
+	          .catch((error) => {
+	            // Autoplay was prevented.
+	            video.muted = false;
+	            video.play();
+	          });
+	      }
+	    }, 2000);
+	
+	    var swiper01 = new Swiper(".swiper01", {
+	      speed: 600,
+	      slidesPerView: 1,
+	      spaceBetween: 20,
+	      autoplay: {
+	        delay: 8000,
+	        disableOnInteraction: false,
+	      },
+	      loop: true,
+	      pagination: false,
+	      navigation: {
+	        nextEl: ".slider01 .swiper-button-next",
+	        prevEl: ".slider01 .swiper-button-prev",
+	      },
+	      breakpoints: {
+	        240: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        768: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        1024: {
+	          slidesPerView: 1,
+	          spaceBetween: 20,
+	        },
+	      },
+	    });
+	
+	    var swiper02 = new Swiper(".swiper02", {
+	      speed: 600,
+	      slidesPerView: 1,
+	      spaceBetween: 20,
+	      autoplay: {
+	        delay: 8000,
+	        disableOnInteraction: false,
+	      },
+	      loop: true,
+	      pagination: false,
+	      navigation: {
+	        nextEl: ".slider02 .swiper-button-next",
+	        prevEl: ".slider02 .swiper-button-prev",
+	      },
+	      breakpoints: {
+	        240: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        768: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        1024: {
+	          slidesPerView: 1,
+	          spaceBetween: 20,
+	        },
+	      },
+	    });
+	
+	    var swiper03 = new Swiper(".swiper03", {
+	      speed: 600,
+	      slidesPerView: 1,
+	      spaceBetween: 20,
+	      autoplay: {
+	        delay: 8000,
+	        disableOnInteraction: false,
+	      },
+	      loop: true,
+	      pagination: false,
+	      navigation: {
+	        nextEl: ".slider03 .swiper-button-next",
+	        prevEl: ".slider03 .swiper-button-prev",
+	      },
+	      breakpoints: {
+	        240: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        768: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        1024: {
+	          slidesPerView: 1,
+	          spaceBetween: 20,
+	        },
+	      },
+	    });
+	
+	    var swiper04 = new Swiper(".swiper04", {
+	      speed: 600,
+	      slidesPerView: 1,
+	      spaceBetween: 20,
+	      autoplay: {
+	        delay: 8000,
+	        disableOnInteraction: false,
+	      },
+	      loop: true,
+	      pagination: false,
+	      navigation: {
+	        nextEl: ".slider03 .swiper-button-next",
+	        prevEl: ".slider03 .swiper-button-prev",
+	      },
+	      breakpoints: {
+	        240: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        768: {
+	          slidesPerView: 1,
+	          spaceBetween: 10,
+	        },
+	        1024: {
+	          slidesPerView: 1,
+	          spaceBetween: 20,
+	        },
+	      },
+	    });
+	
+	    jQuery(".ItemModal").hide();
+	    jQuery(".ItemModal").first().show();
+	
+	    jQuery(".ItemExp").on("click", function (e) {
+	      e.preventDefault();
+	      var modaldiv = jQuery(this).data("modal");
+	      jQuery(".ItemModal").hide();
+	      jQuery(modaldiv).fadeIn("slow");
+	    });
+	  });
+	
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@16.1.0/dist/lazyload.min.js"></script>
+<!--</script>-->
+<script async src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<div class="container-fluid position-relative p-0">
+	<img class="w-100 d-none d-md-block" src="img/banner-congelados.png" />
+	<img class="w-100 d-block d-md-none" src="img/banner-congelados.webp" />
+</div>
+
+<section class="bg-site px-3 px-md-0">
+	<div class="container container-int">
+		<div class="row justify-content-center align-items-center py-5">
+			<div class="col-11 col-md-10">
+				<div class="row justify-content-center align-items-center pt-0 pt-md-4">
+					<div class="col-12 text-center text-md-left pb-md-0 d-flex justify-content-center">
+						<img src="img/LOGO VYC (2).png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="bg-site px-3 px-md-0 d-none d-md-block">
+	<div class="container">
+		<div class="row justify-content-center">
+			<h3 class="col-11 col-md-10 text-center heading mb-0">¿Cómo funciona?</h3>
+			<div class="col-12 col-md-10 text-center pt-md-5 px-0 px-md-3">
+				<h3>
+          <b>Pide online</b> y <b>retira en nuestro domicilio</b> o recibe desde
+          la comodidad de tu hogar a través de
+          <b>nuestro servicio de Delivery.</b>
+        </h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="bg-site px-3 px-md-0 d-block d-md-none">
+	<div class="container pb-5">
+		<div class="row justify-content-center">
+			<h3 class="col-11 col-md-10 text-center pb-4 pb-md-5 heading mb-0">
+        ¿Cómo funciona?
+      </h3>
+			<div class="col-11">
+				<h3>
+          <b>Pide online</b> y <b>retira en nuestro domicilio</b> o recibe desde
+          la comodidad de tu hogar a través de
+          <b>nuestro servicio de Delivery.</b>
+        </h3>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+<section class="bg-site px-3 px-md-0">
+	<div class="container pt-2 pb-5">
+		<div class="row justify-content-center text-center">
+			<h3 class="heading col-11 col-md-10 pt-5 pt-md-4 pb-5 mb-0 mb-md-3">
+        Descubre nuestros productos disponibles
+      </h3>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-10">
+				<div class="row">
+
+					<div class="card col-12 col-md-4" style="width: 5rem;">
+						<img src="img/papas-mc-cain.webp" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Papas MC Cain</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<button class="btn btn-primary add-to-cart" data-product="Papas">Añadir al carrito</button>
+							<button class="btn btn-second" data-product="Papas" onclick="window.location.href='cart.html'">Ver carrito</button>
+							
+						</div>
+					</div>
+					<div class="card col-12 col-md-4" style="width: 5rem;">
+						<img src="img/golden-chicken.webp" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Papas MC Cain</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<button class="btn btn-primary add-to-cart" data-product="Nuggets">Añadir al carrito</button>
+							<button class="btn btn-second" data-product="Papas" onclick="window.location.href='cart.html'">Ver carrito</button>
+							
+						</div>
+					</div>
+					<div class="card col-12 col-md-4" style="width: 5rem;">
+						<img src="img/choclo-grano.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Papas MC Cain</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<button class="btn btn-primary add-to-cart" data-product="Choclo">Añadir al carrito</button>
+							<button class="btn btn-second" data-product="Papas" onclick="window.location.href='cart.html'">Ver carrito</button>
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+
+
+<!-- <section class="bg-site pb-5 px-3 px-md-0">
+	<div class="container py-5 mb-5" style="border-radius: 0 0 50px 50px">
+		<div class="row justify-content-center pb-4">
+
+
+			<div class="container contenedor-footer mb-5">
+				<div class="col-10 footer__pickup">
+					<h3 class="heading text-center">¡Estamos para ti!</h3>
+					<p class="description-footer pb-4 pb-md-0 text-center">
+						Si tienes alguna duda o consulta contáctate al correo<br />
+						<b><a href="mailto:araucopickup@parauco.com"
+                >araucopickup@parauco.com</a
+              ></b
+            >
+            o al teléfono <strong>56 9 8491 7569</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="add.js"></script> <!-- Tu script de carrito -->
